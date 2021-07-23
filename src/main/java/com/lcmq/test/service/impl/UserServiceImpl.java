@@ -45,4 +45,17 @@ public class UserServiceImpl implements UserService {
 
         return user;
     }
+
+    @Override
+    public User updateUser(User user) {
+        UserActionEvent userActionEvent = new UserActionEvent(this);
+        userActionEvent.setUser(user);
+        userActionEvent.setOperate(EnumUserOperate.UPDATE);
+        userActionEvent.setSuccess(true);
+
+        applicationEventPublisher.publishEvent(userActionEvent);
+        log.info("发送update事件:{}", userActionEvent);
+
+        return null;
+    }
 }

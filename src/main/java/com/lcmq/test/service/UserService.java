@@ -4,4 +4,6 @@ import com.lcmq.test.dto.User;
 
 public interface UserService {
     User addUser(User user);
+
+    User updateUser(User user);
 }

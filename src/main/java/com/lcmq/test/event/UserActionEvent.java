@@ -10,6 +10,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class UserActionEvent extends ApplicationEvent{
+    private static final long serialVersionUID = -1504804569078211818L;
     // 操作是否成功
     private Boolean success;
 

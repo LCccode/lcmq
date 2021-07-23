@@ -17,6 +17,7 @@ public abstract class ApplicationEvent extends EventObject {
     public ApplicationEvent(Object source) {
         super(source);
     }
+
     public final long getTimestamp(){
         return this.timestamp;
     }
